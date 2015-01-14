@@ -1,0 +1,1 @@
+ffmpeg -r 15 -b 320k -i %d.jpg -s 480x360 -vcodec libx264 0output.mp4
