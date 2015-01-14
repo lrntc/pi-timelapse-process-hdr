@@ -1,6 +1,6 @@
 #!/bin/bash
 
-x=0;
+x=1;
 
 filelist=`ls | grep '.jpg'`
 
