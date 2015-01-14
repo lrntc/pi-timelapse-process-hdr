@@ -4,11 +4,15 @@
 DIR=timelapse
 
 x=1
-while [ $x -le 1440 ]; do
+total=100
+
+while [ $x -le $total ]; do
+
+echo Frame $x of $total
 
 filename=$x.jpg
 
-raspistill --raw -w 640 -h 480 -o $DIR/$filename
+raspistill --raw -w 2592 -h 1944 -o $DIR/$filename
 
 x=$(( $x + 1 ))
 
