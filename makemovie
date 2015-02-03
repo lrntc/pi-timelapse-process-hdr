@@ -1,1 +1,1 @@
-ffmpeg -r 15 -b 320k -i %d.jpg -s 480x360 -vcodec libx264 timelapse.mp4
+ffmpeg -r 25 -b 320k -i timelapse/frame_%d.jpg -s 480x360 -vcodec libx264 timelapse.mp4

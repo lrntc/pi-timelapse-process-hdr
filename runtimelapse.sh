@@ -3,19 +3,5 @@
 
 DIR=timelapse
 
-x=1
-total=100
+raspistill -w 1920 -h 1080 -o $DIR/frame_%d.jpg -t 86400000 -tl 10000 --contrast 25 --ISO 100
 
-while [ $x -le $total ]; do
-
-echo Frame $x of $total
-
-filename=$x.jpg
-
-raspistill --raw -w 2592 -h 1944 -o $DIR/$filename
-
-x=$(( $x + 1 ))
-
-sleep 10;
-
-done;

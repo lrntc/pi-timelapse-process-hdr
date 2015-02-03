@@ -4,15 +4,18 @@
 DIR=HDR
 
 x=1
-while [ $x -le 3 ]; do
+total=100
+
+while [ $x -le $total ]; do
 
 filename=$x.jpg
 
-raspistill --raw -w 2592 -h 1944 -o $DIR/minus10_$filename -ev -10
-raspistill --raw -w 2592 -h 1944 -o $DIR/zero_$filename -ev 0
-raspistill --raw -w 2592 -h 1944 -o $DIR/plus10_$filename -ev +10
+raspistill -w 1920 -h 1080 -o $DIR/minus10_$filename -ev -10
+raspistill -w 1920 -h 1080 -o $DIR/zero_$filename -ev 0
+raspistill -w 1920 -h 1080 -o $DIR/plus10_$filename -ev +10
 
 x=$(( $x + 1 ))
 
+sleep 10;
 
 done;
